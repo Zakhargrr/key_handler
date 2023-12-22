@@ -1,0 +1,20 @@
+Name                              Stmts   Miss  Cover
+-----------------------------------------------------
+config\__init__.py                    0      0   100%
+config\asgi.py                        4      4     0%
+config\settings.py                   21      0   100%
+config\urls.py                        7      0   100%
+config\wsgi.py                        4      4     0%
+main\__init__.py                      0      0   100%
+main\admin.py                         1      0   100%
+main\apps.py                          4      0   100%
+main\migrations\0001_initial.py       5      0   100%
+main\migrations\__init__.py           0      0   100%
+main\models.py                        9      0   100%
+main\serializers.py                  22      0   100%
+main\tests.py                        34      0   100%
+main\urls.py                          5      0   100%
+main\views.py                        54      0   100%
+manage.py                            12      2    83%
+-----------------------------------------------------
+TOTAL                               182     10    95%
