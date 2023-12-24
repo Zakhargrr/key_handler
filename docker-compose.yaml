@@ -4,13 +4,12 @@ services:
 
   db:
     image: postgres
+    env_file:
+      - ./.env
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=12345678
-      - POSTGRES_DB=key_handler_db
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - PGDATA=${PGDATA}
     volumes:
-      - pg_data:/var/lib/postgresql/data/pgdata
+      - pg_data:${PGDATA}
     ports:
       - '5432:5432'
     healthcheck:
@@ -24,7 +23,7 @@ services:
     tty: true
     command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     env_file:
-      - ./docker.env
+      - ./.env
     ports:
       - '8000:8000'
     depends_on:
